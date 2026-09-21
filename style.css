@@ -1,0 +1,283 @@
+/*
+  Beginner note:
+  Change the main colours here, and adjust spacing values to change the layout.
+  Use a calm blue and cream colour palette for a simple, friendly look.
+*/
+
+:root {
+  --cream: #f9f4ec;
+  --paper: #fffdf9;
+  --blue-900: #183b5b;
+  --blue-700: #2f6b9f;
+  --blue-500: #5a8db7;
+  --blue-200: #dfeef8;
+  --text: #1f2d3d;
+  --muted: #52657a;
+  --border: #d8e4ee;
+  --shadow: rgba(24, 59, 91, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.7;
+  background: var(--cream);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ a {
+  color: var(--blue-700);
+}
+
+ a:hover {
+  color: var(--blue-900);
+}
+
+ a:focus-visible,
+ button:focus-visible {
+  outline: 3px solid var(--blue-900);
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  background: var(--blue-900);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: rgba(249, 244, 236, 0.96);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 72px;
+  gap: 1rem;
+}
+
+.brand {
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--blue-900);
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+}
+
+.hero {
+  background: linear-gradient(180deg, var(--blue-200), var(--paper));
+  padding: 4rem 0 3rem;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  min-height: 420px;
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.eyebrow {
+  margin: 0 0 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--blue-700);
+}
+
+h1,
+h2,
+h3 {
+  color: var(--blue-900);
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.12rem;
+  color: var(--muted);
+  max-width: 560px;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.85rem 1.4rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button.primary {
+  background: var(--blue-700);
+  color: #fff;
+}
+
+.button.secondary {
+  background: transparent;
+  color: var(--blue-900);
+  border: 2px solid var(--blue-700);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.alt-section {
+  background: #f3f8fc;
+}
+
+.section-heading {
+  margin-bottom: 2rem;
+}
+
+.about-grid,
+.skills-grid,
+.projects-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.skills-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.projects-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.about-card,
+.skill-item,
+.project-card,
+.contact-box {
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+
+.skill-item,
+.project-card {
+  min-height: 180px;
+}
+
+.contact-section {
+  padding-bottom: 5rem;
+}
+
+.contact-box {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.site-footer {
+  background: var(--blue-900);
+  color: #fff;
+  padding: 1.2rem 0;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .nav {
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem 0;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .about-grid,
+  .skills-grid,
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+
+  .hero-content {
+    min-height: auto;
+  }
+}
+
+/*
+  Beginner note:
+  Change spacing values here to make the page tighter or more open.
+  Example: adjust padding-top, gap, or margin-bottom values.
+*/
