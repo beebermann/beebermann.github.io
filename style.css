@@ -2,7 +2,7 @@
   Beginner note:
   Change the main colours here, and adjust spacing values to change the layout.
   Use a calm blue and cream colour palette for a simple, friendly look.
-*/
+ */
 
 :root {
   --cream: #f9f4ec;
@@ -38,16 +38,16 @@ img {
   display: block;
 }
 
- a {
+a {
   color: var(--blue-700);
 }
 
- a:hover {
+a:hover {
   color: var(--blue-900);
 }
 
- a:focus-visible,
- button:focus-visible {
+a:focus-visible,
+button:focus-visible {
   outline: 3px solid var(--blue-900);
   outline-offset: 3px;
 }
@@ -108,7 +108,9 @@ img {
 }
 
 .hero {
-  background: linear-gradient(180deg, var(--blue-200), var(--paper));
+  background:
+    linear-gradient(rgba(8, 32, 46, 0.2), rgba(8, 32, 46, 0.35)),
+    url("WhatsApp%20Image%202026-10-12%20at%2020.33.48.jpeg") center center / cover no-repeat;
   padding: 4rem 0 3rem;
 }
 
@@ -280,4 +282,4 @@ h2 {
   Beginner note:
   Change spacing values here to make the page tighter or more open.
   Example: adjust padding-top, gap, or margin-bottom values.
-*/
+ */
